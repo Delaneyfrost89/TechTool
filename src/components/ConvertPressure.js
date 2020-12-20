@@ -1,16 +1,10 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 import { DropdownButton, Dropdown } from 'react-bootstrap'
 import { ComponentWrapper, HR } from '../styles/GlobalStyles'
-import { useSpring, useTransition, animated } from 'react-spring'
 
 const ConvertPressure = () => {
-	const animationProps = useSpring({
-		config: { duration: 10, mass: 1, tension: 200, friction: 8 },
-		to: { bottom: 0 },
-		from: { bottom: 360 },
-	})
-
 	const [pressures, setPressures] = useState({
 		pressureOneVal: 0,
 		pressureOneType: 'PSI',
@@ -106,7 +100,7 @@ const ConvertPressure = () => {
 	}
 
 	return (
-		<PressureStyles style={animationProps}>
+		<PressureStyles>
 			<div>
 				<input
 					type='number'
@@ -116,7 +110,7 @@ const ConvertPressure = () => {
 				/>
 				<DropdownButton
 					id='dropdown-basic-button'
-					className='type-one'
+					className='dropdown type-one'
 					title={pressures.pressureOneType}
 				>
 					<Dropdown.Item onClick={changeType}>PSI</Dropdown.Item>
@@ -135,7 +129,7 @@ const ConvertPressure = () => {
 				/>
 				<DropdownButton
 					id='dropdown-basic-button'
-					className='type-two'
+					className='dropdown type-two'
 					title={pressures.pressureTwoType}
 				>
 					<Dropdown.Item onClick={changeType}>PSI</Dropdown.Item>
@@ -148,11 +142,38 @@ const ConvertPressure = () => {
 	)
 }
 
-const PressureStyles = styled(animated(ComponentWrapper))`
-	position: relative;
-	transition: all ease-in-out 3s;
-	z-index: 0;
-	bottom: 0;
+const PressureStyles = styled(ComponentWrapper)`
+	/* position: relative;
+	transition: all ease-in-out 3s; */
+	/* z-index: 0; */
+	/* bottom: 0; */
+	width: 80%;
+	margin: 0 auto 4rem;
+	input {
+		width: 80%;
+		box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+	}
+	.dropdown {
+		display: inline-block;
+		width: 20%;
+		margin: 0;
+		button {
+			margin-top: -4px;
+			padding: 0.3rem;
+			border-radius: 0 4px 4px 0;
+			font-size: 1rem;
+			width: 100%;
+			box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+		}
+	}
+
+	@media (max-width: 500px) {
+		width: 90%;
+		gap: 2rem;
+		label {
+			margin-bottom: 0.5rem;
+		}
+	}
 `
 
 export default ConvertPressure

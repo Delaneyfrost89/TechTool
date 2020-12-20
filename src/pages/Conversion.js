@@ -4,6 +4,7 @@ import ConvertTime from '../components/ConvertTime'
 import ConvertPressure from '../components/ConvertPressure'
 import ConvertTemp from '../components/ConvertTemp'
 import styled from 'styled-components'
+import { motion, AnimatePresence } from 'framer-motion'
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
 
 const Conversion = () => {
@@ -22,8 +23,18 @@ const Conversion = () => {
 					Pressure{' '}
 					<span>{showPressure ? <BiChevronUp /> : <BiChevronDown />}</span>
 				</h3>
-				{showPressure && <ConvertPressure />}
 			</ExpandBoxStyles>
+			<AnimatePresence>
+				{showPressure && (
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+					>
+						<ConvertPressure />
+					</motion.div>
+				)}
+			</AnimatePresence>
 			<ExpandBoxStyles
 				onClick={() => {
 					setShowTemp(!showTemp)
@@ -34,7 +45,17 @@ const Conversion = () => {
 					<span>{showTemp ? <BiChevronUp /> : <BiChevronDown />}</span>
 				</h3>
 			</ExpandBoxStyles>
-			{showTemp && <ConvertTemp />}
+			<AnimatePresence>
+				{showTemp && (
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+					>
+						<ConvertTemp />
+					</motion.div>
+				)}
+			</AnimatePresence>
 			<ExpandBoxStyles
 				onClick={() => {
 					setShowTime(!showTime)
@@ -44,7 +65,17 @@ const Conversion = () => {
 					Time <span>{showTime ? <BiChevronUp /> : <BiChevronDown />}</span>
 				</h3>
 			</ExpandBoxStyles>
-			{showTime && <ConvertTime />}
+			<AnimatePresence>
+				{showTime && (
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+					>
+						<ConvertTime />
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</div>
 	)
 }
