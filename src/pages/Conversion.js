@@ -27,9 +27,10 @@ const Conversion = () => {
 			<AnimatePresence>
 				{showPressure && (
 					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
+						initial={{ opacity: 0, height: 0 }}
+						animate={{ opacity: 1, height: 'auto' }}
+						exit={{ opacity: 0, height: 0 }}
+						style={{ overflow: 'hidden' }}
 					>
 						<ConvertPressure />
 					</motion.div>
@@ -48,9 +49,10 @@ const Conversion = () => {
 			<AnimatePresence>
 				{showTemp && (
 					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
+						initial={{ opacity: 0, height: 0 }}
+						animate={{ opacity: 1, height: 'auto' }}
+						exit={{ opacity: 0, height: 0 }}
+						style={{ overflow: 'hidden' }}
 					>
 						<ConvertTemp />
 					</motion.div>
@@ -68,9 +70,10 @@ const Conversion = () => {
 			<AnimatePresence>
 				{showTime && (
 					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
+						initial={{ opacity: 0, height: 0 }}
+						animate={{ opacity: 1, height: 'auto' }}
+						exit={{ opacity: 0, height: 0 }}
+						style={{ overflow: 'hidden' }}
 					>
 						<ConvertTime />
 					</motion.div>

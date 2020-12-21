@@ -136,6 +136,11 @@ const ConvertTimeStyles = styled(ComponentWrapper)`
 		gap: 2rem;
 		label {
 			margin-bottom: 0.5rem;
+			font-size: 1.5rem;
+		}
+		input {
+			width: 100%;
+			font-size: 1.5rem;
 		}
 	}
 `

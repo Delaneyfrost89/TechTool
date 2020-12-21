@@ -6,39 +6,59 @@ import { ComponentWrapper, HR } from '../styles/GlobalStyles'
 
 const ConvertPressure = () => {
 	const [pressures, setPressures] = useState({
-		pressureOneVal: 0,
+		pressureOneVal: 10,
 		pressureOneType: 'PSI',
-		pressureTwoVal: 0,
+		pressureTwoVal: 160,
 		pressureTwoType: 'OZ',
 	})
 
 	const changeType = (e) => {
 		let newValues = { ...pressures }
 		if (e.currentTarget.parentNode.parentNode.className.includes('type-one')) {
-			console.log('change 1 to ' + e.currentTarget.innerHTML)
 			newValues.pressureOneType = e.currentTarget.innerHTML
 			pressureConvert({ newValues }, 'a')
 		} else if (
 			e.currentTarget.parentNode.parentNode.className.includes('type-two')
 		) {
-			console.log('change 2 to ' + e.currentTarget.innerHTML)
 			newValues.pressureTwoType = e.currentTarget.innerHTML
 			pressureConvert({ newValues }, 'b')
 		}
 	}
 
 	const changePressureVal = (e) => {
+		const numberRegex = /^[-.0-9]+$/
+		const negDecimalRegex = /^[-.\\]$/
 		let newValues = { ...pressures }
 		let changedPressure
-		if (e.currentTarget.name === 'pressureOne') {
-			newValues.pressureOneVal = e.currentTarget.value
-			changedPressure = 'a'
+
+		if (e.currentTarget.value === '') {
+			newValues.pressureOneVal = ''
+			newValues.pressureTwoVal = ''
+			setPressures({ ...newValues })
+		} else {
+			if (negDecimalRegex.test(e.currentTarget.value)) {
+				if (e.currentTarget.name === 'pressureOne') {
+					newValues.pressureOneVal = e.currentTarget.value
+					newValues.pressureTwoVal = e.currentTarget.value
+				}
+				if (e.currentTarget.name === 'pressureTwo') {
+					newValues.pressureTwoVal = e.currentTarget.value
+					newValues.pressureOneVal = e.currentTarget.value
+				}
+				setPressures({ ...newValues })
+			}
+			if (numberRegex.test(Number(e.currentTarget.value))) {
+				if (e.currentTarget.name === 'pressureOne') {
+					newValues.pressureOneVal = Number(e.currentTarget.value)
+					changedPressure = 'a'
+				}
+				if (e.currentTarget.name === 'pressureTwo') {
+					newValues.pressureTwoVal = Number(e.currentTarget.value)
+					changedPressure = 'b'
+				}
+				pressureConvert({ newValues }, changedPressure)
+			}
 		}
-		if (e.currentTarget.name === 'pressureTwo') {
-			newValues.pressureTwoVal = e.currentTarget.value
-			changedPressure = 'b'
-		}
-		pressureConvert({ newValues }, changedPressure)
 	}
 
 	const pressureConvert = ({ newValues }, changedPressure = 'a') => {
@@ -172,6 +192,18 @@ const PressureStyles = styled(ComponentWrapper)`
 		gap: 2rem;
 		label {
 			margin-bottom: 0.5rem;
+		}
+		input {
+			width: 100%;
+			font-size: 1.5rem;
+		}
+		.dropdown {
+			display: block;
+			width: 100%;
+			button {
+				border-radius: 0 0 4px 4px;
+				font-size: 1.2rem;
+			}
 		}
 	}
 `
