@@ -19,9 +19,14 @@ export const Layout = styled.div`
 	}
 `
 
+export const PageWrapper = styled.div`
+	width: 100vw;
+	margin-top: 6rem;
+`
+
 export const ComponentWrapper = styled.div`
 	width: 90vw;
-	margin: 0 auto;
+	margin: 6rem auto;
 	font-size: 1.4rem;
 	padding-top: 5%;
 	input {

@@ -1,10 +1,11 @@
 import React from 'react'
+import { PageWrapper } from '../styles/GlobalStyles'
 
 const Home = () => {
 	return (
-		<div>
+		<PageWrapper>
 			<h2>dis home page.</h2>
-		</div>
+		</PageWrapper>
 	)
 }
 

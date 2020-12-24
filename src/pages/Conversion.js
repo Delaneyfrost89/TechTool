@@ -6,6 +6,7 @@ import ConvertTemp from '../components/ConvertTemp'
 import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
+import { PageWrapper } from '../styles/GlobalStyles'
 
 const Conversion = () => {
 	const [showPressure, setShowPressure] = useState(false)
@@ -13,7 +14,7 @@ const Conversion = () => {
 	const [showTime, setShowTime] = useState(false)
 
 	return (
-		<div>
+		<PageWrapper>
 			<ExpandBoxStyles
 				onClick={() => {
 					setShowPressure(!showPressure)
@@ -79,7 +80,7 @@ const Conversion = () => {
 					</motion.div>
 				)}
 			</AnimatePresence>
-		</div>
+		</PageWrapper>
 	)
 }
 
