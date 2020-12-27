@@ -182,9 +182,22 @@ const FormStyles = styled.form`
 
 	@media (max-width: 500px) {
 		width: 90%;
-		gap: 2rem;
+		gap: 1.8rem;
+		grid-template-columns: 1fr;
+		div {
+			width: 100%;
+			display: block;
+		}
 		label {
 			margin-bottom: 0.5rem;
+			font-size: 1.4rem;
+			display: inline-block;
+			width: 50%;
+		}
+		input {
+			font-size: 1.5rem;
+			display: inline-block;
+			width: 50%;
 		}
 	}
 `
@@ -202,6 +215,12 @@ const PercentStyles = styled.div`
 
 	@media (max-width: 500px) {
 		width: 90%;
+		h3 {
+			font-size: 1.4rem;
+		}
+		h4 {
+			font-size: 1.2rem;
+		}
 		.percents {
 			gap: 1.5rem;
 		}

@@ -89,7 +89,7 @@ const ExpandBoxStyles = styled.div`
 	overflow: hidden;
 	font-size: 1.2rem;
 	text-align: center;
-	z-index: 10;
+	z-index: 1;
 	padding: 0.25rem;
 	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 	background: rgb(2, 32, 47);

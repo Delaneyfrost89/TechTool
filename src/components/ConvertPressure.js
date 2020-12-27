@@ -129,7 +129,7 @@ const ConvertPressure = () => {
 		<PressureStyles>
 			<div>
 				<input
-					type='number'
+					type='text'
 					name='pressureOne'
 					value={pressures.pressureOneVal}
 					onChange={changePressureVal}
@@ -149,14 +149,15 @@ const ConvertPressure = () => {
 			<HR />
 			<div>
 				<input
-					type='number'
+					type='text'
 					name='pressureTwo'
 					value={pressures.pressureTwoVal}
 					onChange={changePressureVal}
 				/>
 				<DropdownButton
 					id='dropdown-basic-button'
-					className='dropdown type-two'
+					drop='up'
+					className='dropdown type-two btn-secondary'
 					title={pressures.pressureTwoType}
 				>
 					<Dropdown.Item onClick={changeType}>PSI</Dropdown.Item>
@@ -171,12 +172,9 @@ const ConvertPressure = () => {
 }
 
 const PressureStyles = styled(ComponentWrapper)`
-	/* position: relative;
-	transition: all ease-in-out 3s; */
-	/* z-index: 0; */
-	/* bottom: 0; */
+	transition: all ease-in-out 3s;
 	width: 80%;
-	margin: 0 auto 4rem;
+
 	input {
 		width: 80%;
 		box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
@@ -185,6 +183,7 @@ const PressureStyles = styled(ComponentWrapper)`
 		display: inline-block;
 		width: 20%;
 		margin: 0;
+
 		button {
 			margin-top: -4px;
 			padding: 0.3rem;
@@ -192,12 +191,14 @@ const PressureStyles = styled(ComponentWrapper)`
 			font-size: 1rem;
 			width: 100%;
 			box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+			z-index: 10099;
 		}
 	}
 
 	@media (max-width: 500px) {
 		width: 90%;
 		gap: 2rem;
+		margin: 2.5rem auto 6rem;
 		label {
 			margin-bottom: 0.5rem;
 		}

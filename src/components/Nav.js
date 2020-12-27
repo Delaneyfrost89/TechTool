@@ -128,7 +128,7 @@ const NavbarStyles = styled.nav`
 			position: absolute;
 			z-index: 1;
 			background: #fff;
-			width: 40vw;
+			width: 60vw;
 			height: auto;
 			padding: 1rem 0;
 			top: 6rem;
@@ -139,7 +139,7 @@ const NavbarStyles = styled.nav`
 
 		.nav-links {
 			text-align: center;
-			padding: 2rem;
+			padding: 1rem;
 			width: 100%;
 			height: auto;
 		}

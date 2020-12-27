@@ -18,7 +18,11 @@ const AboutUs = () => {
 				For more information about Convergence Controls and Engineering please
 				visit our website.
 			</h4>
-			<a href='https://convergence-ce.com/' target='_blank' rel='noopener'>
+			<a
+				href='https://convergence-ce.com/'
+				target='_blank'
+				rel='noreferrer noopener'
+			>
 				Visit Our Website
 			</a>
 		</AboutUsStyles>
@@ -47,7 +51,7 @@ const AboutUsStyles = styled(PageWrapper)`
 		font-weight: 500;
 		font-size: 1.6rem;
 		padding: 1rem;
-
+		text-align: center;
 		box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 		background: white;
 		transition: all 0.4s ease-in-out;

@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Layout = styled.div`
-	overflow: hidden;
 	background: rgb(0, 107, 161);
 	background: linear-gradient(
 		0deg,

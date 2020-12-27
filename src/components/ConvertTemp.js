@@ -155,10 +155,8 @@ const ConvertTemp = () => {
 }
 
 const TemperatureStyles = styled(ComponentWrapper)`
-	/* position: relative;
-	transition: all ease-in-out 3s; */
-	/* z-index: 0; */
-	/* bottom: 0; */
+	transition: all ease-in-out 3s;
+
 	width: 80%;
 	margin: 0 auto 4rem;
 	input {

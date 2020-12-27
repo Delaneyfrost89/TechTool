@@ -5,12 +5,12 @@ import { PageWrapper } from '../styles/GlobalStyles'
 const Home = () => {
 	return (
 		<HomeStyles>
-			<h2>Convergence Controls Tech Tool.</h2>
+			<h2>Convergence Controls Tech Tool</h2>
 			<p>
-				This is a tool to assist you while working on automation an controls
-				system. Supplying conversions for various pressures, temperatures, and
-				flow rates along with a scaling calculator to check any 4 - 20mA or 1 -
-				5V transmitters.
+				This is a tool to assist you while working on automation and controls
+				systems. Supplying conversions for various pressures, temperatures, and
+				flow rates along with a scaling calculator to check any 4-20mA or 1-5V
+				transmitters.
 			</p>
 			<div>
 				<Link to='/Conversion'>Conversion Calculator</Link>
@@ -55,6 +55,8 @@ const HomeStyles = styled(PageWrapper)`
 		box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 		background: white;
 		transition: all 0.4s ease-in-out;
+		justify-content: center;
+		align-content: center;
 	}
 	a:hover {
 		font-size: 1.65rem;
@@ -62,10 +64,20 @@ const HomeStyles = styled(PageWrapper)`
 		box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 	}
 	div {
-		margin: 2rem;
+		margin: 2rem auto;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 4rem;
 		justify-content: space-evenly;
+		text-align: center;
+	}
+
+	@media (max-width: 500px) {
+		a {
+			width: 100%;
+		}
+		div {
+			gap: 2rem;
+		}
 	}
 `
