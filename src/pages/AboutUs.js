@@ -34,6 +34,7 @@ export default AboutUs
 const AboutUsStyles = styled(PageWrapper)`
 	width: 90vw;
 	margin: 6rem auto;
+	text-align: center;
 	h2 {
 		margin-top: 2rem;
 		padding-top: 2rem;

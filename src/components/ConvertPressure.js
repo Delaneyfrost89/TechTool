@@ -174,7 +174,8 @@ const ConvertPressure = () => {
 const PressureStyles = styled(ComponentWrapper)`
 	transition: all ease-in-out 3s;
 	width: 80%;
-
+	display: grid;
+	grid-template-rows: 1fr auto 1fr;
 	input {
 		width: 80%;
 		box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);

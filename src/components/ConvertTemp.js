@@ -142,6 +142,7 @@ const ConvertTemp = () => {
 				/>
 				<DropdownButton
 					id='dropdown-basic-button'
+					drop='up'
 					className='dropdown type-two btn-secondary'
 					title={temps.tempTwoType}
 				>
@@ -156,9 +157,9 @@ const ConvertTemp = () => {
 
 const TemperatureStyles = styled(ComponentWrapper)`
 	transition: all ease-in-out 3s;
-
+	display: grid;
+	grid-template-rows: 1fr auto 1fr;
 	width: 80%;
-	margin: 0 auto 4rem;
 	input {
 		width: 70%;
 		box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
