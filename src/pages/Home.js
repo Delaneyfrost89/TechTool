@@ -9,7 +9,7 @@ const Home = () => {
 			<p>
 				This is a tool to assist you while working on automation and controls
 				systems. Supplying conversions for various pressures, temperatures, and
-				flow rates along with a scaling calculator to check any 4-20mA or 1-5V
+				time along with a scaling calculator to check any 4-20mA or 1-5V
 				transmitters.
 			</p>
 			<div>
@@ -21,7 +21,7 @@ const Home = () => {
 				visit our website.
 			</h4>
 			<div>
-				<a href='https://convergence-ce.com/' target='_blank' rel='noopener'>
+				<a href='https://convergence-ce.com/' target='_blank' rel='noreferrer'>
 					Visit Our Website
 				</a>
 			</div>
