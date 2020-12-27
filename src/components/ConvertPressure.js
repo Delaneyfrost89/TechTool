@@ -90,6 +90,9 @@ const ConvertPressure = () => {
 			case 'IN/H2O':
 				pressureAToPSI = pressureA / 27.7076
 				break
+			case 'BAR':
+				pressureAToPSI = pressureA * 14.5038
+				break
 			case 'KPA':
 				pressureAToPSI = pressureA / 6.89476
 				break
@@ -106,6 +109,9 @@ const ConvertPressure = () => {
 				break
 			case 'IN/H2O':
 				pressureB = pressureAToPSI * 27.7076
+				break
+			case 'BAR':
+				pressureB = pressureA / 14.5038
 				break
 			case 'KPA':
 				pressureB = pressureAToPSI * 6.89476
@@ -136,6 +142,7 @@ const ConvertPressure = () => {
 					<Dropdown.Item onClick={changeType}>PSI</Dropdown.Item>
 					<Dropdown.Item onClick={changeType}>OZ</Dropdown.Item>
 					<Dropdown.Item onClick={changeType}>IN/H2O</Dropdown.Item>
+					<Dropdown.Item onClick={changeType}>BAR</Dropdown.Item>
 					<Dropdown.Item onClick={changeType}>KPA</Dropdown.Item>
 				</DropdownButton>
 			</div>
@@ -155,6 +162,7 @@ const ConvertPressure = () => {
 					<Dropdown.Item onClick={changeType}>PSI</Dropdown.Item>
 					<Dropdown.Item onClick={changeType}>OZ</Dropdown.Item>
 					<Dropdown.Item onClick={changeType}>IN/H2O</Dropdown.Item>
+					<Dropdown.Item onClick={changeType}>BAR</Dropdown.Item>
 					<Dropdown.Item onClick={changeType}>KPA</Dropdown.Item>
 				</DropdownButton>
 			</div>

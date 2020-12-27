@@ -85,12 +85,12 @@ const Conversion = () => {
 }
 
 const ExpandBoxStyles = styled.div`
-	position: relative;
-	border: 1px solid #b1b1b1;
+	width: 100vw;
+	overflow: hidden;
 	font-size: 1.2rem;
 	text-align: center;
 	z-index: 10;
-	border-radius: 10px;
+	padding: 0.25rem;
 	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 	background: rgb(2, 32, 47);
 	background: linear-gradient(

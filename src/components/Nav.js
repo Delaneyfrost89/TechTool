@@ -5,11 +5,7 @@ import { BiMenu } from 'react-icons/bi'
 import { IoMdClose } from 'react-icons/io'
 import Logo from '../assets/CCE_Logo.jpg'
 
-const NavComponent = () => {
-	const [click, setClick] = useState(false)
-	const handleClick = () => setClick(!click)
-	const closeMobileMenu = () => setClick(false)
-
+const NavComponent = ({ click, handleClick, closeMobileMenu }) => {
 	return (
 		<NavbarStyles>
 			<Link to='/' className='navbar-logo' onClick={closeMobileMenu}>

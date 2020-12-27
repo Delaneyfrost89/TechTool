@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Layout = styled.div`
+	overflow: hidden;
 	background: rgb(0, 107, 161);
 	background: linear-gradient(
 		0deg,
@@ -10,6 +11,9 @@ export const Layout = styled.div`
 	color: white;
 	width: 100%;
 	min-height: 100vh;
+	padding-bottom: 4rem;
+	line-height: 1.6rem;
+	letter-spacing: 2px;
 	a {
 		text-decoration: none;
 		color: black;
@@ -20,7 +24,7 @@ export const Layout = styled.div`
 `
 
 export const PageWrapper = styled.div`
-	width: 100vw;
+	width: 100%;
 	margin-top: 6rem;
 `
 
