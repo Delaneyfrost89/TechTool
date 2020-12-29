@@ -26,7 +26,8 @@ const ConvertTemp = () => {
 	}
 
 	const changeTempVal = (e) => {
-		const numberRegex = /^[-.0-9]+$/
+		const numberRegex = /^-?\d*\.?\d*$/
+		const decimalEndRegex = /^-?\d*\.$/
 		const negDecimalRegex = /^[-.\\]$/
 		let newValues = { ...temps }
 		let changedTemp
@@ -46,8 +47,15 @@ const ConvertTemp = () => {
 					newValues.tempOneVal = e.currentTarget.value
 				}
 				setTemps({ ...newValues })
-			}
-			if (numberRegex.test(Number(e.currentTarget.value))) {
+			} else if (decimalEndRegex.test(e.currentTarget.value)) {
+				if (e.currentTarget.name === 'tempOne') {
+					newValues.tempOneVal = e.currentTarget.value
+				}
+				if (e.currentTarget.name === 'tempTwo') {
+					newValues.tempTwoVal = e.currentTarget.value
+				}
+				setTemps({ ...newValues })
+			} else if (numberRegex.test(Number(e.currentTarget.value))) {
 				if (e.currentTarget.name === 'tempOne') {
 					newValues.tempOneVal = Number(e.currentTarget.value)
 					changedTemp = 'a'

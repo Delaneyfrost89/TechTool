@@ -26,7 +26,8 @@ const ConvertPressure = () => {
 	}
 
 	const changePressureVal = (e) => {
-		const numberRegex = /^[-.0-9]+$/
+		const numberRegex = /^-?\d*\.?\d*$/
+		const decimalEndRegex = /^-?\d*\.$/
 		const negDecimalRegex = /^[-.\\]$/
 		let newValues = { ...pressures }
 		let changedPressure
@@ -46,8 +47,15 @@ const ConvertPressure = () => {
 					newValues.pressureOneVal = e.currentTarget.value
 				}
 				setPressures({ ...newValues })
-			}
-			if (numberRegex.test(Number(e.currentTarget.value))) {
+			} else if (decimalEndRegex.test(e.currentTarget.value)) {
+				if (e.currentTarget.name === 'pressureOne') {
+					newValues.pressureOneVal = e.currentTarget.value
+				}
+				if (e.currentTarget.name === 'pressureTwo') {
+					newValues.pressureTwoVal = e.currentTarget.value
+				}
+				setPressures({ ...newValues })
+			} else if (numberRegex.test(Number(e.currentTarget.value))) {
 				if (e.currentTarget.name === 'pressureOne') {
 					newValues.pressureOneVal = Number(e.currentTarget.value)
 					changedPressure = 'a'
