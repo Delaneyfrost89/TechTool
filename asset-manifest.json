@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/TechTool/static/css/main.c706de8a.chunk.css",
+    "main.js": "/TechTool/static/js/main.debec725.chunk.js",
+    "main.js.map": "/TechTool/static/js/main.debec725.chunk.js.map",
+    "runtime-main.js": "/TechTool/static/js/runtime-main.a0cb4b87.js",
+    "runtime-main.js.map": "/TechTool/static/js/runtime-main.a0cb4b87.js.map",
+    "static/css/2.1a02f21c.chunk.css": "/TechTool/static/css/2.1a02f21c.chunk.css",
+    "static/js/2.504ca54c.chunk.js": "/TechTool/static/js/2.504ca54c.chunk.js",
+    "static/js/2.504ca54c.chunk.js.map": "/TechTool/static/js/2.504ca54c.chunk.js.map",
+    "static/js/3.1b309c56.chunk.js": "/TechTool/static/js/3.1b309c56.chunk.js",
+    "static/js/3.1b309c56.chunk.js.map": "/TechTool/static/js/3.1b309c56.chunk.js.map",
+    "index.html": "/TechTool/index.html",
+    "static/css/2.1a02f21c.chunk.css.map": "/TechTool/static/css/2.1a02f21c.chunk.css.map",
+    "static/css/main.c706de8a.chunk.css.map": "/TechTool/static/css/main.c706de8a.chunk.css.map",
+    "static/js/2.504ca54c.chunk.js.LICENSE.txt": "/TechTool/static/js/2.504ca54c.chunk.js.LICENSE.txt",
+    "static/media/CCE_Logo.37536384.jpg": "/TechTool/static/media/CCE_Logo.37536384.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a0cb4b87.js",
+    "static/css/2.1a02f21c.chunk.css",
+    "static/js/2.504ca54c.chunk.js",
+    "static/css/main.c706de8a.chunk.css",
+    "static/js/main.debec725.chunk.js"
+  ]
+}
