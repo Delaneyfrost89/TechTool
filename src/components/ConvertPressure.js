@@ -26,8 +26,8 @@ const ConvertPressure = () => {
   }
 
   const changePressureVal = (e) => {
-    const numberRegex = /^-?\d{0,12}\.?\d{0,10}$/
-    const decimalEndRegex = /^-?\d{0,12}\.$/
+    const numberRegex = /^-?\d{0,8}\.?\d{0,8}$/
+    const decimalEndRegex = /^-?\d{0,8}\.$/
     const negDecimalRegex = /^[-.\\]$/
     let newValues = { ...pressures }
     let changedPressure
