@@ -187,6 +187,7 @@ const PressureStyles = styled(ComponentWrapper)`
   input {
     width: 80%;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    height: 2.3rem;
   }
   .dropdown {
     display: inline-block;

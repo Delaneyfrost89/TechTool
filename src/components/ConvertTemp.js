@@ -26,7 +26,7 @@ const ConvertTemp = () => {
   }
 
   const changeTempVal = (e) => {
-    const numberRegex = /^-?\d{0,8\.?\d{0,8}$/
+    const numberRegex = /^-?\d{0,8}\.?\d{0,8}$/
     const decimalEndRegex = /^-?\d{0,8}\.$/
     const negDecimalRegex = /^[-.\\]$/
     let newValues = { ...temps }
@@ -171,6 +171,7 @@ const TemperatureStyles = styled(ComponentWrapper)`
   input {
     width: 70%;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    height: 2.3rem;
   }
   .dropdown {
     display: inline-block;
