@@ -9,7 +9,7 @@ const VolumeFlowRateConversion = () => {
     flowRateOneVal: 10,
     flowRateOneType: 'Oil Barrel',
     flowRateOnePeriod: 'HR',
-    flowRateTwoVal: 160,
+    flowRateTwoVal: 315.00000001,
     flowRateTwoType: 'Gallon',
     flowRateTwoPeriod: 'SEC',
   })
