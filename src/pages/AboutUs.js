@@ -53,13 +53,13 @@ const AboutUsStyles = styled(PageWrapper)`
     font-size: 1.6rem;
     padding: 1rem;
     text-align: center;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 3px #333;
     background: white;
     transition: all 0.4s ease-in-out;
   }
   a:hover {
     font-size: 1.65rem;
     padding: 1.1rem;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 4px #333;
   }
 `

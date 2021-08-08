@@ -136,8 +136,8 @@ const VolumeFlowRateConversion = () => {
         console.error('ERROR')
     }
     changedFlowRate === 'a'
-      ? (newValues.flowRateTwoVal = flowRateB)
-      : (newValues.flowRateOneVal = flowRateB)
+      ? (newValues.flowRateTwoVal = flowRateB.toFixed(6))
+      : (newValues.flowRateOneVal = flowRateB.toFixed(6))
     setFlowRates({ ...newValues })
   }
 

@@ -128,8 +128,8 @@ const ConvertPressure = () => {
         console.error('ERROR')
     }
     changedPressure === 'a'
-      ? (newValues.pressureTwoVal = pressureB)
-      : (newValues.pressureOneVal = pressureB)
+      ? (newValues.pressureTwoVal = pressureB.toFixed(6))
+      : (newValues.pressureOneVal = pressureB.toFixed(6))
     setPressures({ ...newValues })
   }
 
@@ -200,7 +200,7 @@ const PressureStyles = styled(ComponentWrapper)`
       border-radius: 0 4px 4px 0;
       font-size: 1rem;
       width: 100%;
-      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 1px 3px #333;
       z-index: 10099;
     }
   }

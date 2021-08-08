@@ -116,8 +116,8 @@ const ConvertTemp = () => {
         console.error('ERROR')
     }
     changedTemp === 'a'
-      ? (newValues.tempTwoVal = tempB)
-      : (newValues.tempOneVal = tempB)
+      ? (newValues.tempTwoVal = tempB.toFixed(6))
+      : (newValues.tempOneVal = tempB.toFixed(8))
     setTemps({ ...newValues })
   }
 
@@ -183,7 +183,7 @@ const TemperatureStyles = styled(ComponentWrapper)`
       border-radius: 0 4px 4px 0;
       font-size: 1rem;
       width: 100%;
-      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 1px 3px #333;
     }
   }
 

@@ -58,7 +58,7 @@ const NavbarStyles = styled.nav`
   align-items: center;
   font-size: 1.2rem;
   color: #333;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 3px #333;
   z-index: 900;
   width: 100vw;
 

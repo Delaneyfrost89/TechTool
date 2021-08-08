@@ -115,9 +115,9 @@ const ExpandBoxStyles = styled.div`
   text-align: center;
   z-index: 1;
   padding: 0.25rem;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 3px #333;
   background: #1f7d99;
-  border: 1px solid rgba(50, 50, 50, 0.25);
+  border: 1px solid rgba(50, 50, 50, 0.4);
 `
 
 export default Conversion

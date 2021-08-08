@@ -62,7 +62,7 @@ const HomeStyles = styled(PageWrapper)`
   a:hover {
     font-size: 1.65rem;
     padding: 1.1rem;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 4px #333;
   }
   div {
     margin: 2rem auto;
