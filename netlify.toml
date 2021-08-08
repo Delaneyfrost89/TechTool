@@ -1,5 +1,17 @@
 [[redirects]]
-  from = "/*"
+  from = "https://www.ccetechtool.com/Scaling"
   to = "https://ccetechtool.com"
-  status = 200
+  status = 301
+  force = true
+
+  [[redirects]]
+  from = "https://www.ccetechtool.com/Conversion"
+  to = "https://ccetechtool.com"
+  status = 301
+  force = true
+
+  [[redirects]]
+  from = "https://www.ccetechtool.com/AboutUs"
+  to = "https://ccetechtool.com"
+  status = 301
   force = true
