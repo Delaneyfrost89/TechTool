@@ -204,6 +204,9 @@ const PressureStyles = styled(ComponentWrapper)`
       z-index: 10099;
     }
   }
+  @media (min-width: 1400px) {
+    max-width: 60%;
+  }
 
   @media (max-width: 500px) {
     width: 90%;

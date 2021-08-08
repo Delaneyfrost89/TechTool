@@ -65,7 +65,7 @@ const ConvertTime = () => {
 
   return (
     <ConvertTimeStyles>
-      <div>
+      <div className='milli'>
         <label>Milliseconds</label>
         <input
           name='milliseconds'
@@ -73,9 +73,9 @@ const ConvertTime = () => {
           type='number'
           onChange={convertTimes}
         />
+        <HR />
       </div>
-      <HR />
-      <div>
+      <div className='inputs'>
         <div>
           <label>Hours</label>
           <input
@@ -119,7 +119,7 @@ const ConvertTime = () => {
 
 const ConvertTimeStyles = styled(ComponentWrapper)`
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 10rem;
   label {
     display: block;
     width: 100%;
@@ -130,6 +130,17 @@ const ConvertTimeStyles = styled(ComponentWrapper)`
     width: 100%;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
     height: 2.3rem;
+  }
+  @media (min-width: 1400px) {
+    max-width: 60%;
+  }
+  @media (min-width: 1100px) {
+    .inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 4rem;
+    }
   }
 
   @media (max-width: 500px) {

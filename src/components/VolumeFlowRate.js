@@ -212,7 +212,20 @@ const FlowRateStyles = styled(ComponentWrapper)`
     }
   }
 
+  @media (min-width: 1400px) {
+    max-width: 60%;
+  }
+
   @media (max-width: 1000px) {
+    input {
+      width: 60%;
+    }
+    .dropdown {
+      width: 40%;
+    }
+  }
+
+  @media (max-width: 600px) {
     width: 90%;
     gap: 2rem;
     margin: 2.5rem auto 6rem;
